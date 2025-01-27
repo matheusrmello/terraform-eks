@@ -4,7 +4,7 @@ resource "aws_internet_gateway" "eks_igw" {
   tags = merge(
     local.tags,
     {
-        Name = "${var.project_name}-igw"
+      Name = "${var.project_name}-igw"
     }
   )
 }
@@ -20,7 +20,7 @@ resource "aws_route_table" "eks_rtb_public" {
   tags = merge(
     local.tags,
     {
-        Name = "${var.project_name}-rtb-public"
+      Name = "${var.project_name}-rtb-public"
     }
   )
 }
