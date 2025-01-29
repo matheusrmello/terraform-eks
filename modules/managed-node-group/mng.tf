@@ -6,6 +6,7 @@ resource "aws_eks_node_group" "eks_mng" {
   capacity_type   = "SPOT"
   instance_types  = [var.mng_instance_type]
 
+
   scaling_config {
     desired_size = 1
     max_size     = 2

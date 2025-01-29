@@ -1,3 +1,5 @@
+data "aws_region" "current" {}
+
 module "eks_network" {
   source       = "./modules/network"
   project_name = var.project_name
@@ -27,4 +29,8 @@ module "eks_aws_load_balancer_controller" {
   source       = "./modules/aws-load-balancer-controller"
   project_name = var.project_name
   tags         = local.tags
+  oidc         = module.eks_cluster.oidc
+  cluster_name = module.eks_cluster.cluster_name
+  region       = data.aws_region.current.name
+  vpc_id       = module.eks_network.vpc_id
 }
