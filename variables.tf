@@ -7,3 +7,14 @@ variable "project_name" {
   type        = string
   description = "Project name to be used as a prefix for all resources"
 }
+
+variable "region" {
+  type        = string
+  description = "AWS region to create resources"
+}
+
+variable "tags" {
+  type        = map(string)
+  description = "A mao of tags to add to all resources"
+  default     = {}
+}
