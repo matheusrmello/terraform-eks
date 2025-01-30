@@ -15,5 +15,5 @@ variable "region" {
 
 variable "tags" {
   type        = map(any)
-  description = "A mao of tags to add to all resources"
+  description = "A map of tags to add to all resources"
 }
