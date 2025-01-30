@@ -35,10 +35,12 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | CIDR block for the VPC | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used as a prefix for all resources | `string` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | AWS region to create resources | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | A mao of tags to add to all resources | `map(any)` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_ca"></a> [ca](#output\_ca) | n/a |
+| <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
+| <a name="output_project_name"></a> [project\_name](#output\_project\_name) | n/a |
 <!-- END_TF_DOCS -->

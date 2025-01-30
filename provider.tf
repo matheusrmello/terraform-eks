@@ -13,10 +13,15 @@ terraform {
       version = "3.0.0-pre1"
     }
   }
+  backend "s3" {
+    bucket = "user-test-tfstate-eks"
+    key    = "dev/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
-  region = var.region
+  region = "us-east-1"
 }
 
 provider "kubernetes" {

@@ -32,3 +32,19 @@ resource "helm_release" "eks_helm_controller" {
     }
   ]
 }
+
+# resource "helm_release" "jenkins" {
+#   name = "jenkins"
+#   repository = "oci://registry-1.docker.io/bitnamicharts/jenkins"
+#   chart      = "bitnami/jenkins"
+#   namespace = "jenkins"
+#   create_namespace = true
+#   timeout = 600
+
+#   repository_username = "matheusmello09"
+#   repository_password = "Math_rm09!"
+
+#   values = [
+#     file("charts/jenkins/values.yaml")
+#   ]
+# }

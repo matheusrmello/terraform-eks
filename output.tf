@@ -10,6 +10,6 @@ output "endpoint" {
   value = module.eks_cluster.endpoint
 }
 
-output " cluster_name" {
-    value = module.eks_cluster.cluster_name
+output "project_name" {
+  value = module.eks_cluster.cluster_name
 }
