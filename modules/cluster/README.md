@@ -18,6 +18,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_ecr_repository.flask](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ecr_repository) | resource |
 | [aws_eks_cluster.eks_cluster](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster) | resource |
 | [aws_iam_openid_connect_provider.eks_oidc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider) | resource |
 | [aws_iam_role.eks_cluster_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
@@ -40,6 +41,7 @@ No modules.
 |------|-------------|
 | <a name="output_certificate_authority"></a> [certificate\_authority](#output\_certificate\_authority) | n/a |
 | <a name="output_cluster_name"></a> [cluster\_name](#output\_cluster\_name) | n/a |
+| <a name="output_cluster_sg"></a> [cluster\_sg](#output\_cluster\_sg) | n/a |
 | <a name="output_eks_vpc_config"></a> [eks\_vpc\_config](#output\_eks\_vpc\_config) | n/a |
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
 | <a name="output_oidc"></a> [oidc](#output\_oidc) | n/a |

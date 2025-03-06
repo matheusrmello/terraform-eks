@@ -33,18 +33,17 @@ resource "helm_release" "eks_helm_controller" {
   ]
 }
 
-# resource "helm_release" "jenkins" {
-#   name = "jenkins"
-#   repository = "oci://registry-1.docker.io/bitnamicharts/jenkins"
-#   chart      = "bitnami/jenkins"
-#   namespace = "jenkins"
-#   create_namespace = true
-#   timeout = 600
+resource "helm_release" "sealed_secrets" {
+  name       = "sealed-secrets-controller"
+  repository = "https://bitnami-labs.github.io/sealed-secrets"
+  chart      = "sealed-secrets"
+  version    = "2.17.1"
+  namespace  = "kube-system"
 
-#   repository_username = "matheusmello09"
-#   repository_password = "Math_rm09!"
-
-#   values = [
-#     file("charts/jenkins/values.yaml")
-#   ]
-# }
+  set = [
+    {
+      name  = "fullnameOverride"
+      value = "sealed-secrets-controller"
+    }
+  ]
+}

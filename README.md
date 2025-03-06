@@ -18,8 +18,9 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eks_aws_load_balancer_controller"></a> [eks\_aws\_load\_balancer\_controller](#module\_eks\_aws\_load\_balancer\_controller) | ./modules/aws-load-balancer-controller | n/a |
+| <a name="module_eks_addons"></a> [eks\_addons](#module\_eks\_addons) | ./modules/add-ons | n/a |
 | <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ./modules/cluster | n/a |
+| <a name="module_eks_ec2"></a> [eks\_ec2](#module\_eks\_ec2) | ./modules/ec2 | n/a |
 | <a name="module_eks_network"></a> [eks\_network](#module\_eks\_network) | ./modules/network | n/a |
 | <a name="module_managed_node_group"></a> [managed\_node\_group](#module\_managed\_node\_group) | ./modules/managed-node-group | n/a |
 
@@ -35,14 +36,12 @@
 |------|-------------|------|---------|:--------:|
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | CIDR block for the VPC | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name to be used as a prefix for all resources | `string` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | AWS region to create resources | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(any)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_ca"></a> [ca](#output\_ca) | n/a |
+| <a name="output_cluster_sg"></a> [cluster\_sg](#output\_cluster\_sg) | n/a |
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
 | <a name="output_project_name"></a> [project\_name](#output\_project\_name) | n/a |
 <!-- END_TF_DOCS -->

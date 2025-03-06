@@ -22,15 +22,25 @@ module "managed_node_group" {
   cluster_name      = module.eks_cluster.cluster_name
   subnet_privat_1a  = module.eks_network.subnet_priv_1a
   subnet_privat_1b  = module.eks_network.subnet_priv_1b
-  mng_instance_type = "t3.medium"
+  mng_instance_type = "t3.small"
 }
 
-module "eks_aws_load_balancer_controller" {
-  source       = "./modules/aws-load-balancer-controller"
+module "eks_addons" {
+  source       = "./modules/add-ons"
   project_name = var.project_name
   tags         = local.tags
   oidc         = module.eks_cluster.oidc
   cluster_name = module.eks_cluster.cluster_name
   region       = data.aws_region.current.name
   vpc_id       = module.eks_network.vpc_id
+}
+
+module "eks_ec2" {
+  source         = "./modules/ec2"
+  project_name   = var.project_name
+  tags           = local.tags
+  vpc            = module.eks_network.vpc_id
+  public_subnet  = module.eks_network.subnet_pub_1a
+  private_subnet = module.eks_network.subnet_priv_1b
+  cluster_sg     = module.eks_cluster.cluster_sg
 }
